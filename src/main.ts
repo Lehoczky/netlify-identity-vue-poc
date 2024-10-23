@@ -1,5 +1,11 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import "./style.css";
+import App from "./App.vue";
+import * as netlifyIdentity from "netlify-identity-widget";
 
-createApp(App).mount('#app')
+netlifyIdentity.init({
+  APIUrl: "",
+  locale: "en",
+});
+
+createApp(App).mount("#app");
